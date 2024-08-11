@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~@fortawesome/fontawesome-free/css/all.css"; 
+
+@layer components {
+    .action-btn {
+        @apply bg-gray-700 p-2 rounded-md text-gold font-semibold mr-2;
+        cursor: pointer;
+    }
+    
+  }

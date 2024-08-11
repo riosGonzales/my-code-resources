@@ -1,0 +1,47 @@
+<div *ngIf="name || description">
+    <div class="fixed inset-0 z-30 bg-gray-900 bg-opacity-50 dark:bg-opacity-80" (click)="close()"></div>
+    <div class="fixed right-0 top-0 z-40 flex h-screen w-full flex-col overflow-auto bg-white p-4 focus:outline-0 sm:max-w-[600px] sm:p-6">
+
+        <div class="flex items-center justify-between mb-4 border-b-2 border-gray-500 pb-2">
+            <div class="flex-1 text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">{{ name }}</h2>
+            </div>
+            <button (click)="close()"
+                class="bg-red-600 hover:bg-red-700 text-white p-2 rounded-lg flex items-center justify-center ml-4"
+                aria-label="Salir">
+                <i class="fas fa-times text-base"></i>
+            </button>
+        </div>
+
+        <div class="flex flex-col border-b-2 border-gray-500 pb-4 mb-4">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">Descripción:</h3>
+            <p class="text-gray-700">
+                {{ description }}
+            </p>
+        </div>
+
+        <div>
+            <div class="border-b-2 border-gray-500 pb-4 mb-4">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Etiquetas:</h3>
+                <div class="flex flex-wrap gap-4">
+                    <span class="bg-yellow-700 text-white font-bold text-sm p-2 rounded-lg">
+                        {{ categoria }}
+                    </span>
+                    <span class="bg-yellow-600 text-white font-bold text-sm p-2 rounded-lg">
+                        {{ subcategoria }}
+                    </span>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Enlace Directo:</h3>
+                <span class="inline-flex bg-gray-800 text-white font-bold text-sm p-2 rounded-lg">
+                    <a href="{{ pagina }}" target="_blank" class="text-white flex items-center">
+                        <i class="fas fa-link mr-1 text-sm"></i> Ver página
+                    </a>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</div>

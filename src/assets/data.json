@@ -1,0 +1,375 @@
+[
+  {
+    "id": 1,
+    "name": "Coolors",
+    "url": "https://coolors.co/",
+    "category": "design",
+    "subcategory": "colors",
+    "description": "Generador de paletas de colores para tus proyectos de diseño, permite crear combinaciones de colores armónicas con facilidad. Cuenta con una amplia gama de opciones para personalizar, guardar y compartir paletas."
+  },
+  {
+    "id": 2,
+    "name": "Adobe Color",
+    "url": "https://color.adobe.com/es/",
+    "category": "design",
+    "subcategory": "colors",
+    "description": "Herramienta de Adobe para crear y explorar paletas de colores. Puedes generar esquemas de color basados en reglas cromáticas y explorar combinaciones creadas por otros diseñadores."
+  },
+  {
+    "id": 3,
+    "name": "Color Hunt",
+    "url": "https://colorhunt.co/",
+    "category": "design",
+    "subcategory": "colors",
+    "description": "Colección de paletas de colores creadas por la comunidad, que ofrece inspiración diaria para tus proyectos. Las paletas son seleccionadas y votadas por la comunidad, lo que garantiza una curación de calidad."
+  },
+  {
+    "id": 4,
+    "name": "Happy Hues",
+    "url": "https://www.happyhues.co/",
+    "category": "design",
+    "subcategory": "colors",
+    "description": "Proporciona paletas de colores armoniosas junto con ejemplos de uso en interfaces de usuario. Ideal para diseñadores que buscan combinaciones de colores funcionales para sitios web y aplicaciones."
+  },
+  {
+    "id": 5,
+    "name": "Google Fonts",
+    "url": "https://fonts.google.com/",
+    "category": "design",
+    "subcategory": "fonts",
+    "description": "Una de las bibliotecas de fuentes gratuitas más extensas y populares, ofrece una variedad de fuentes web que puedes explorar y probar en vivo, para utilizarlas en tus proyectos digitales."
+  },
+  {
+    "id": 6,
+    "name": "DaFont",
+    "url": "https://www.dafont.com/",
+    "category": "design",
+    "subcategory": "fonts",
+    "description": "Plataforma que ofrece una amplia colección de fuentes gratuitas para descargar y utilizar en proyectos de diseño. Organizado por categorías, es ideal para encontrar fuentes temáticas y creativas."
+  },
+  {
+    "id": 7,
+    "name": "Font Squirrel",
+    "url": "https://www.fontsquirrel.com/",
+    "category": "design",
+    "subcategory": "fonts",
+    "description": "Colección curada de fuentes de alta calidad y gratuitas para uso comercial. También ofrece un generador de fuentes web que te permite crear kits de fuentes personalizados."
+  },
+  {
+    "id": 8,
+    "name": "Adobe Fonts",
+    "url": "https://fonts.adobe.com/",
+    "category": "design",
+    "subcategory": "fonts",
+    "description": "Servicio de Adobe que ofrece una vasta colección de fuentes de alta calidad disponibles a través de una suscripción. Integrado con las herramientas de Adobe Creative Cloud, facilita la gestión de fuentes en proyectos creativos."
+  },
+  {
+    "id": 9,
+    "name": "Flaticon",
+    "url": "https://www.flaticon.com/",
+    "category": "design",
+    "subcategory": "icons",
+    "description": "La mayor base de datos de iconos gratuitos vectorizados. Ofrece millones de iconos en múltiples formatos, que puedes personalizar y descargar para uso en tus proyectos."
+  },
+  {
+    "id": 10,
+    "name": "IconFinder",
+    "url": "https://www.iconfinder.com/",
+    "category": "design",
+    "subcategory": "icons",
+    "description": "Una de las mayores bibliotecas de iconos premium y gratuitos. Permite buscar, personalizar y descargar iconos vectoriales en una amplia gama de estilos y formatos."
+  },
+  {
+    "id": 11,
+    "name": "Material Icons",
+    "url": "https://material.io/resources/icons/",
+    "category": "design",
+    "subcategory": "icons",
+    "description": "Colección de iconos basada en las directrices de Material Design de Google. Ofrece una gran variedad de iconos personalizables para su uso en aplicaciones y sitios web que siguen este lenguaje de diseño."
+  },
+  {
+    "id": 12,
+    "name": "Noun Project",
+    "url": "https://thenounproject.com/",
+    "category": "design",
+    "subcategory": "icons",
+    "description": "Una plataforma que ofrece una vasta colección de iconos vectoriales creados por una comunidad global de diseñadores. Ideal para encontrar iconos de alta calidad para cualquier temática."
+  },
+  {
+    "id": 13,
+    "name": "Unsplash",
+    "url": "https://unsplash.com/",
+    "category": "design",
+    "subcategory": "images",
+    "description": "Colección de fotografías de alta calidad y libres de derechos, contribuidas por fotógrafos de todo el mundo. Ideal para encontrar imágenes impactantes para tus proyectos de diseño."
+  },
+  {
+    "id": 14,
+    "name": "Pexels",
+    "url": "https://www.pexels.com/",
+    "category": "design",
+    "subcategory": "images",
+    "description": "Banco de imágenes gratuitas que ofrece fotos y videos de alta calidad. Perfecto para obtener recursos visuales que puedes utilizar en proyectos personales o comerciales."
+  },
+  {
+    "id": 15,
+    "name": "Pixabay",
+    "url": "https://pixabay.com/",
+    "category": "design",
+    "subcategory": "images",
+    "description": "Plataforma que ofrece una gran colección de fotos, videos, ilustraciones y vectores de alta calidad, todos libres de derechos para uso en cualquier tipo de proyecto."
+  },
+  {
+    "id": 16,
+    "name": "FreeImages",
+    "url": "https://www.freeimages.com/",
+    "category": "design",
+    "subcategory": "images",
+    "description": "Una extensa colección de imágenes gratuitas para uso personal y comercial, organizada en categorías que facilitan la búsqueda de recursos visuales adecuados."
+  },
+  {
+    "id": 17,
+    "name": "Python Tutor",
+    "url": "https://pythontutor.com/",
+    "category": "backend",
+    "subcategory": "learningTools"
+  },
+  {
+    "id": 18,
+    "name": "Algorithm Visualizer",
+    "url": "https://algorithm-visualizer.org/",
+    "category": "backend",
+    "subcategory": "learningTools"
+  },
+  {
+    "id": 19,
+    "name": "VisuAlgo",
+    "url": "https://visualgo.net/en",
+    "category": "backend",
+    "subcategory": "learningTools"
+  },
+  {
+    "id": 20,
+    "name": "Codi.link",
+    "url": "https://codi.link/",
+    "category": "frontend",
+    "subcategory": "onlineCompilers2"
+  },
+  {
+    "id": 21,
+    "name": "JDoodle",
+    "url": "https://www.jdoodle.com/",
+    "category": "backend",
+    "subcategory": "onlineCompilers"
+  },
+  {
+    "id": 22,
+    "name": "Ideone",
+    "url": "https://ideone.com/",
+    "category": "backend",
+    "subcategory": "onlineCompilers"
+  },
+  {
+    "id": 23,
+    "name": "CodeChef IDE",
+    "url": "https://www.codechef.com/ide",
+    "category": "backend",
+    "subcategory": "onlineCompilers"
+  },
+  {
+    "id": 24,
+    "name": "LeetCode",
+    "url": "https://leetcode.com/",
+    "category": "backend",
+    "subcategory": "exercisesChallenges"
+  },
+  {
+    "id": 25,
+    "name": "HackerRank",
+    "url": "https://www.hackerrank.com/",
+    "category": "backend",
+    "subcategory": "exercisesChallenges"
+  },
+  {
+    "id": 26,
+    "name": "Codewars",
+    "url": "https://www.codewars.com/",
+    "category": "backend",
+    "subcategory": "exercisesChallenges"
+  },
+  {
+    "id": 27,
+    "name": "Exercism",
+    "url": "https://exercism.io/",
+    "category": "backend",
+    "subcategory": "exercisesChallenges"
+  },
+  {
+    "id": 28,
+    "name": "Data Structure Visualizations",
+    "url": "https://www.cs.usfca.edu/~galles/visualization/Algorithms.html",
+    "category": "backend",
+    "subcategory": "learningTools"
+  },
+  {
+    "id": 29,
+    "name": "OnlineGDB",
+    "url": "https://www.onlinegdb.com/",
+    "category": "backend",
+    "subcategory": "onlineCompilers"
+  },
+  {
+    "id": 30,
+    "name": "CodePen",
+    "url": "https://codepen.io/pen/",
+    "category": "frontend",
+    "subcategory": "onlineCompilers2"
+  },
+  {
+    "id": 31,
+    "name": "JSFiddle",
+    "url": "https://jsfiddle.net",
+    "category": "frontend",
+    "subcategory": "onlineCompilers2"
+  },
+  {
+    "id": 32,
+    "name": "CodeSandbox",
+    "url": "https://codesandbox.io",
+    "category": "frontend",
+    "subcategory": "onlineCompilers2"
+  },
+  {
+    "id": 33,
+    "name": "CSS Battle",
+    "url": "https://cssbattle.dev",
+    "category": "frontend",
+    "subcategory": "CSS_Tools"
+  },
+  {
+    "id": 34,
+    "name": "Flexbox Froggy",
+    "url": "https://flexboxfroggy.com",
+    "category": "frontend",
+    "subcategory": "CSS_Tools"
+  },
+  {
+    "id": 35,
+    "name": "CSS Grid Garden",
+    "url": "https://cssgridgarden.com",
+    "category": "frontend",
+    "subcategory": "CSS_Tools"
+  },
+  {
+    "id": 36,
+    "name": "CSS Grid Generator",
+    "url": "https://cssgrid-generator.netlify.app",
+    "category": "frontend",
+    "subcategory": "CSS_Tools"
+  },
+  {
+    "id": 37,
+    "name": "Postman",
+    "url": "https://www.postman.com",
+    "category": "frontend",
+    "subcategory": "apis"
+  },
+  {
+    "id": 38,
+    "name": "Hoppscotch",
+    "url": "https://hoppscotch.io",
+    "category": "frontend",
+    "subcategory": "apis"
+  },
+  {
+    "id": 39,
+    "name": "Reqbin",
+    "url": "https://reqbin.com",
+    "category": "frontend",
+    "subcategory": "apis"
+  },
+  {
+    "id": 40,
+    "name": "Httpie",
+    "url": "https://httpie.io",
+    "category": "frontend",
+    "subcategory": "apis"
+  },
+  {
+    "id": 41,
+    "name": "Error Lens",
+    "url": "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens",
+    "category": "other",
+    "subcategory": "extensions"
+  },
+  {
+    "id": 42,
+    "name": "Material Icon Theme",
+    "url": "https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme",
+    "category": "other",
+    "subcategory": "extensions"
+  },
+  {
+    "id": 43,
+    "name": "Thunder Client",
+    "url": "https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client",
+    "category": "other",
+    "subcategory": "extensions"
+  },
+  {
+    "id": 44,
+    "name": "Import Cost",
+    "url": "https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost",
+    "category": "other",
+    "subcategory": "extensions"
+  },
+  {
+    "id": 45,
+    "name": "Cyberchef",
+    "url": "https://gchq.github.io/CyberChef/",
+    "category": "other",
+    "subcategory": "security"
+  },
+  {
+    "id": 46,
+    "name": "Codebeautifiers",
+    "url": "https://www.codebeautifiers.com/",
+    "category": "other",
+    "subcategory": "security"
+  },
+  {
+    "id": 47,
+    "name": "VirusTotal",
+    "url": "https://www.virustotal.com/gui/home/upload",
+    "category": "other",
+    "subcategory": "security"
+  },
+  {
+    "id": 48,
+    "name": "Check SSL",
+    "url": "https://www.sslshopper.com/ssl-checker.html",
+    "category": "other",
+    "subcategory": "security"
+  },
+  {
+    "id": 49,
+    "name": "dbdiagram.io",
+    "url": "https://dbdiagram.io/home",
+    "category": "other",
+    "subcategory": "dba"
+  },
+  {
+    "id": 50,
+    "name": "SQLDBM",
+    "url": "https://sqldbm.com/Home/",
+    "category": "other",
+    "subcategory": "dba"
+  },
+  {
+    "id": 51,
+    "name": "DbDesigner.net",
+    "url": "https://www.dbdesigner.net/",
+    "category": "other",
+    "subcategory": "dba"
+  }
+]
