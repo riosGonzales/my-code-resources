@@ -33,6 +33,13 @@ export class ContainerComponent implements OnInit {
   previousEstado: number = 1;
   isCategorySelected: boolean = false;
 
+  items = [
+    { id: 1, name: 'Diseño UX/UI' },
+    { id: 2, name: 'Backend' },
+    { id: 3, name: 'Frontend' },
+    { id: 4, name: 'Otros' }
+  ];
+
   categories: { category: string, subcategories: string[] }[] = [
     { category: 'design', subcategories: ['colors', 'fonts', 'icons', 'images'] },
     { category: 'backend', subcategories: ['learningTools', 'onlineCompilers', 'exercisesChallenges'] },

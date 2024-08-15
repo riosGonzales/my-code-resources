@@ -19,6 +19,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('tailwindcss-animated'),
     function ({ addComponents }) {
       addComponents({
         '.common-class': {

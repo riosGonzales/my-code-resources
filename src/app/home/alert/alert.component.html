@@ -1,4 +1,5 @@
-<div *ngIf="titulo || message" class="fixed inset-0 overflow-y-auto font-code text-white">
+@if(titulo || message) {
+  <div class="fixed inset-0 overflow-y-auto font-code text-white">
     <div class="bg-black opacity-40 fixed inset-0" (click)="closeAlert()"></div>
     <div class="flex items-center justify-center min-h-screen">
       <div class="bg-gray-800 p-4 rounded border border-white shadow-md relative z-50">
@@ -12,7 +13,7 @@
           </div>
           <hr class="mt-4">
           <div class="mt-4">
-            <span  class="action-btn hover:bg-gray-500" (click)="confirmar()">
+            <span class="action-btn hover:bg-gray-500" (click)="confirmar()">
               <i class="fa-solid fa-square-check mr-2"></i>Confirmar</span>
             <span class="action-btn hover:bg-gray-500" (click)="closeAlert()">
               <i class="fa-solid fa-circle-xmark mr-2"></i>Cancelar</span>
@@ -21,3 +22,4 @@
       </div>
     </div>
   </div>
+}

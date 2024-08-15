@@ -1,6 +1,6 @@
-<div *ngIf="name || description">
-    <div class="fixed inset-0 z-30 bg-gray-900 bg-opacity-50 dark:bg-opacity-80" (click)="close()"></div>
-    <div class="fixed right-0 top-0 z-40 flex h-screen w-full flex-col overflow-auto bg-white p-4 focus:outline-0 sm:max-w-[600px] sm:p-6">
+@if(name || description) {
+    <div class="fixed inset-0 z-30 z-50 bg-gray-900 bg-opacity-50 dark:bg-opacity-80" (click)="close()"></div>
+    <div class="fixed right-0 top-0 z-50 flex h-screen w-full flex-col overflow-auto bg-white p-4 focus:outline-0 sm:max-w-[600px] sm:p-6">
 
         <div class="flex items-center justify-between mb-4 border-b-2 border-gray-500 pb-2">
             <div class="flex-1 text-center">
@@ -44,4 +44,4 @@
         </div>
         
     </div>
-</div>
+}

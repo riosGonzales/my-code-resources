@@ -8,15 +8,15 @@
         myCodeResources es una plataforma integral diseñada para reunir y organizar herramientas e información
         esenciales para ayudar a los desarrolladores a lo largo de sus proyectos.
       </p>
+      @if(!isCategorySelected){
       <div
-        class="bg-transparent border border-slate-400 border-dashed p-2 text-white inline-flex items-center justify-center mx-auto rounded-lg transition-opacity duration-500"
-        *ngIf="!isCategorySelected">
+        class="bg-transparent border border-slate-400 border-dashed p-2 text-white inline-flex items-center justify-center mx-auto rounded-lg transition-opacity duration-500">
         <img src="/assets/click_derecho.png" alt="Mouse" class="w-8 h-8" />
         <p class="text-lg font-semibold ml-2">Selecciona una categoría</p>
       </div>
+      } @else {
       <div
-        class="bg-transparent border border-slate-400 border-dashed p-2 text-white inline-flex items-center justify-center mx-auto rounded-lg transition-opacity duration-500"
-        *ngIf="isCategorySelected">
+        class="bg-transparent border border-slate-400 border-dashed p-2 text-white inline-flex items-center justify-center mx-auto rounded-lg transition-opacity duration-500">
         <div class="flex flex-col items-center">
           <div class="flex items-center mb-2">
             <img src="/assets/click_derecho.png" alt="Icono Página" class="w-8 h-8" />
@@ -28,6 +28,7 @@
           </div>
         </div>
       </div>
+      }
     </div>
   </section>
   <div class="relative border-b border-b-slate-400 pt-0 pb-14">
@@ -40,30 +41,22 @@
       </div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      @for (item of items; track item.id) {
       <div class="common-class group transition-colors duration-300 relative"
-        [ngClass]="{'border-slate-600 text-slate-300': estado === 1}" (click)="updateEstado(1)">
-        <div *ngIf="estado === 1" class="absolute top-0 right-0 mt-2 mr-2 w-3 h-3 bg-green-500 rounded-full"></div>
-        Diseño UX/UI
+        [ngClass]="{'border-slate-600 text-slate-300': estado === item.id}" (click)="updateEstado(item.id)">
+        @if(estado === item.id) {
+        <div class="absolute top-0 right-0 mt-2 mr-2 w-3 h-3 bg-green-500 rounded-full"></div>
+        }
+        {{ item.name }}
       </div>
-      <div class="common-class group transition-colors duration-300 relative"
-        [ngClass]="{'border-slate-600 text-slate-300': estado === 2}" (click)="updateEstado(2)">
-        <div *ngIf="estado === 2" class="absolute top-0 right-0 mt-2 mr-2 w-3 h-3 bg-green-500 rounded-full"></div>
-        Backend
-      </div>
-      <div class="common-class group transition-colors duration-300 relative"
-        [ngClass]="{'border-slate-600 text-slate-300': estado === 3}" (click)="updateEstado(3)">
-        <div *ngIf="estado === 3" class="absolute top-0 right-0 mt-2 mr-2 w-3 h-3 bg-green-500 rounded-full"></div>
-        Frontend
-      </div>
-      <div class="common-class group transition-colors duration-300 relative"
-        [ngClass]="{'border-slate-600 text-slate-300': estado === 4}" (click)="updateEstado(4)">
-        <div *ngIf="estado === 4" class="absolute top-0 right-0 mt-2 mr-2 w-3 h-3 bg-green-500 rounded-full"></div>
-        Otros
-      </div>
+      }
     </div>
   </div>
-  <div *ngIf="estado === 1">
-    <div *ngFor="let subcategory of categories[0].subcategories">
+  <div>
+    @switch (estado) {
+    @case (1) {
+    <div class="animate-fade-right animate-once">
+      @for (subcategory of categories[0].subcategories; track subcategoryNames) {
       <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
         <h2
           class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2">
@@ -71,19 +64,21 @@
         </h2>
         <div class="flex justify-center">
           <ul class="grid grid-cols-1 gap-2 sm:grid-cols-4 md:grid-cols-4">
-            <li *ngFor="let item of filteredData[subcategory]">
-              <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
-                [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)">
-                {{ item.name }}
-              </a>
-            </li>
+            @for (item of filteredData[subcategory]; track item.name) {
+            <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
+              [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)">
+              {{ item.name }}
+            </a>
+            }
           </ul>
         </div>
       </div>
+      }
     </div>
-  </div>
-  <div *ngIf="estado === 2">
-    <div *ngFor="let subcategory of categories[1].subcategories">
+    }
+    @case (2) {
+    <div class="animate-fade-right animate-once">
+      @for (subcategory of categories[1].subcategories; track subcategoryNames) {
       <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
         <h2
           class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2">
@@ -91,56 +86,65 @@
         </h2>
         <div class="flex justify-center">
           <ul class="grid grid-cols-1 gap-2 sm:grid-cols-4 md:grid-cols-4">
-            <li *ngFor="let item of filteredData[subcategory]">
-              <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
-                [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)">
-                {{ item.name }}
-              </a>
-            </li>
+            @for (item of filteredData[subcategory]; track item.name) {
+            <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
+              [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)">
+              {{ item.name }}
+            </a>
+            }
           </ul>
         </div>
       </div>
+      }
     </div>
-  </div>
-  <div *ngIf="estado === 3">
-    <div *ngFor="let subcategory of categories[2].subcategories">
+    }
+    @case (3) {
+    <div class="animate-fade-right animate-once">
+      @for (subcategory of categories[2].subcategories; track subcategoryNames) {
       <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
         <h2
           class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2">
-          {{ subcategoryNames[subcategory] }}
+          {{ subcategoryNames[subcategory || ''] }}
         </h2>
         <div class="flex justify-center">
           <ul class="grid grid-cols-1 gap-2 sm:grid-cols-4 md:grid-cols-4">
-            <li *ngFor="let item of filteredData[subcategory]">
-              <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
-                [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)">
-                {{ item.name }}
-              </a>
-            </li>
+            @for (item of filteredData[subcategory]; track item.name) {
+            <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
+              [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)">
+              {{ item.name }}
+            </a>
+            }
           </ul>
         </div>
       </div>
+      }
     </div>
-  </div>
-  <div *ngIf="estado === 4">
-    <div *ngFor="let subcategory of categories[3].subcategories">
+    }
+    @case (4) {
+    <div class="animate-fade-right animate-once">
+      @for (subcategory of categories[3].subcategories; track subcategoryNames) {
       <div class="relative border-b border-b-slate-400 py-10 sm:py-14">
         <h2
           class="text-md font-regular absolute -top-[17px] flex rounded-lg border border-slate-400 bg-body px-3 py-1 text-white sm:left-1/2 sm:-translate-x-1/2">
-          {{ subcategoryNames[subcategory] }}
+          {{ subcategoryNames[subcategory || ''] }}
         </h2>
         <div class="flex justify-center">
           <ul class="grid grid-cols-1 gap-2 sm:grid-cols-4 md:grid-cols-4">
-            <li *ngFor="let item of filteredData[subcategory]">
-              <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
-                [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)">
-                {{ item.name }}
-              </a>
-            </li>
+            @for (item of filteredData[subcategory]; track item.name) {
+            <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
+              [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)">
+              {{ item.name }}
+            </a>
+            }
           </ul>
         </div>
       </div>
+      }
     </div>
+    }
+    }
   </div>
 </main>
-<app-description *ngIf="estadoDescription === true"></app-description>
+@if(estadoDescription === true){
+<app-description></app-description>
+}

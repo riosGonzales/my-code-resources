@@ -371,5 +371,12 @@
     "url": "https://www.dbdesigner.net/",
     "category": "other",
     "subcategory": "dba"
+  },
+  {
+    "id": 52,
+    "name": "Postgres.new",
+    "url": "https://postgres.new/",
+    "category": "other",
+    "subcategory": "dba"
   }
 ]
