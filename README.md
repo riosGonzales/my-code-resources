@@ -38,7 +38,9 @@ myCodeResources es una plataforma integral diseñada para reunir y organizar her
 - Node.js (versión 14 o superior)
 - Angular CLI (versión 17 o superior)
 
-## Instalación1. Clona el repositorio:
+## Instalación
+
+1. Clona el repositorio:
     ```bash
     git clone https://github.com/riosGonzales/my-code-resources.git
     ```
@@ -69,7 +71,7 @@ myCodeResources es una plataforma integral diseñada para reunir y organizar her
 
 ## 🛠️ Stack
 
-- [![Angular][astro-badge]][astro-url] - The web framework for content-driven websites.
+- [![Angular][angular-badge]][angular-url] - The web framework for content-driven websites.
 - [![Typescript][typescript-badge]][typescript-url] - JavaScript with syntax for types.
 - [![Tailwind CSS][tailwind-badge]][tailwind-url] - A utility-first CSS framework for rapidly building custom designs.
 
@@ -84,5 +86,3 @@ myCodeResources es una plataforma integral diseñada para reunir y organizar her
 [angular-badge]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [typescript-badge]: https://img.shields.io/badge/Typescript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&color=blue
 [tailwind-badge]: https://img.shields.io/badge/Tailwind-ffffff?style=for-the-badge&logo=tailwindcss&logoColor=38bdf8
-
-<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
