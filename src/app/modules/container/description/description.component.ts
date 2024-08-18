@@ -1,17 +1,16 @@
 import { CommonModule, } from '@angular/common';
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ContainerComponent } from '~/home/container/container.component';
-import { Data } from '~/home/container/data.interface';
-import { DataService } from '~/home/services/data.service';
+import { Data } from '~/interfaces/data.interface';
+import { DataService } from '~/services/data.service';
 
 @Component({
   selector: 'app-description',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './description.component.html',
-  styleUrl: './description.component.css'
+  templateUrl: './description.component.html'
 })
+
 export class DescriptionComponent implements OnInit {
 
   name: string | null = null;
@@ -21,7 +20,6 @@ export class DescriptionComponent implements OnInit {
   pagina: string | null = null;
   categoria: string | null = null;
   subcategoria: string | null = null;
-
 
 
   constructor(private dataService: DataService, private renderer: Renderer2) { }

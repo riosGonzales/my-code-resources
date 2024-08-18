@@ -1,8 +1,9 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Data } from '../container/data.interface';
+import { Data } from '../interfaces/data.interface';
 import { map } from 'rxjs/operators';
+import { Category } from '~/interfaces/category.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -12,14 +13,42 @@ export class DataService {
   private jsonUrl = 'assets/data.json';
   private dataSubject = new BehaviorSubject<Data | null>(null);
 
+  constructor(private http: HttpClient) { }
+
+  //Category
   private categoryMap: { [key: string]: string } = {
     'design': 'Diseño UX/UI',
     'frontend': 'Frontend',
     'backend' : 'Backend',
     'other' : 'Otros'
   };
-
   
+  getCategories(): Category[] {
+    return [
+      { id: 1, name: 'Diseño UX/UI' },
+      { id: 2, name: 'Backend' },
+      { id: 3, name: 'Frontend' },
+      { id: 4, name: 'Otros' }
+    ];
+  }
+
+  mapCategory(category: string | null): string | null {
+    return this.categoryMap[category || ''] || category;
+  }
+
+  private categoriesData: { category: string, subcategories: string[] }[] = [
+    { category: 'design', subcategories: ['colors', 'fonts', 'icons', 'images'] },
+    { category: 'backend', subcategories: ['learningTools', 'onlineCompilers', 'exercisesChallenges'] },
+    { category: 'frontend', subcategories: ['onlineCompilers2', 'CSS_Tools', 'apis'] },
+    { category: 'other', subcategories: ['extensions', 'security', 'dba'] }
+  ];
+
+  getCategoriesData(){
+    return this.categoriesData;
+  }
+
+  //Subcategory
+
   private subCategoryMap: { [key: string]: string } = {
     colors: 'Generador de paletas de colores',
     fonts: 'Fuentes de texto',
@@ -36,7 +65,6 @@ export class DataService {
     dba: 'Herramientas DBA'
   };
 
-  constructor(private http: HttpClient) { }
 
   getJson(category: string): Observable<Data[]> {
     const params = new HttpParams().set('category', category);
@@ -54,14 +82,10 @@ export class DataService {
   }
 
   //Mapear datos
-  mapCategory(category: string | null): string | null {
-    return this.categoryMap[category || ''] || category;
-  }
 
   getSubCategoryName(subcategory: string): string {
     return this.subCategoryMap[subcategory] || 'Nombre no disponible'; // Valor predeterminado
   }
-
 
 
   //Enviar datos
