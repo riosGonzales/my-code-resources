@@ -132,251 +132,287 @@
     "name": "Python Tutor",
     "url": "https://pythontutor.com/",
     "category": "backend",
-    "subcategory": "learningTools"
+    "subcategory": "learningTools",
+    "description": "Herramienta educativa en línea que permite a los usuarios visualizar la ejecución de código Python y otros lenguajes de programación paso a paso. Está diseñada para ayudar a estudiantes, principiantes y desarrolladores a comprender cómo se ejecuta su código."
   },
   {
     "id": 18,
     "name": "Algorithm Visualizer",
     "url": "https://algorithm-visualizer.org/",
     "category": "backend",
-    "subcategory": "learningTools"
+    "subcategory": "learningTools",
+    "description": "Plataforma que permite visualizar algoritmos y estructuras de datos en acción, facilitando la comprensión de conceptos complejos."
   },
   {
     "id": 19,
     "name": "VisuAlgo",
     "url": "https://visualgo.net/en",
     "category": "backend",
-    "subcategory": "learningTools"
+    "subcategory": "learningTools",
+    "description": "Recursos educativos en línea para visualizar algoritmos y estructuras de datos, incluyendo animaciones y ejemplos interactivos."
   },
   {
     "id": 20,
     "name": "Codi.link",
     "url": "https://codi.link/",
     "category": "frontend",
-    "subcategory": "onlineCompilers2"
+    "subcategory": "onlineCompilers2",
+    "description": "Plataforma para escribir, ejecutar y compartir código HTML, CSS y JavaScript."
   },
   {
     "id": 21,
     "name": "JDoodle",
     "url": "https://www.jdoodle.com/",
     "category": "backend",
-    "subcategory": "onlineCompilers"
+    "subcategory": "onlineCompilers",
+    "description": "Entorno de desarrollo en línea que permite escribir, ejecutar y compartir código en varios lenguajes de programación."
   },
   {
     "id": 22,
     "name": "Ideone",
     "url": "https://ideone.com/",
     "category": "backend",
-    "subcategory": "onlineCompilers"
+    "subcategory": "onlineCompilers",
+    "description": "Compilador en línea que admite múltiples lenguajes de programación, ideal para probar y depurar código."
   },
   {
     "id": 23,
     "name": "CodeChef IDE",
     "url": "https://www.codechef.com/ide",
     "category": "backend",
-    "subcategory": "onlineCompilers"
+    "subcategory": "onlineCompilers",
+    "description": "Entorno de desarrollo en línea que ofrece un compilador y un editor de código para practicar programación competitiva."
   },
   {
     "id": 24,
     "name": "LeetCode",
     "url": "https://leetcode.com/",
     "category": "backend",
-    "subcategory": "exercisesChallenges"
+    "subcategory": "exercisesChallenges",
+    "description": "Plataforma que ofrece ejercicios y desafíos de programación para mejorar habilidades en algoritmos y estructuras de datos."
   },
   {
     "id": 25,
     "name": "HackerRank",
     "url": "https://www.hackerrank.com/",
     "category": "backend",
-    "subcategory": "exercisesChallenges"
+    "subcategory": "exercisesChallenges",
+    "description": "Plataforma que ofrece desafíos y ejercicios de programación en diferentes dominios, como algoritmos, machine learning y más."
   },
   {
     "id": 26,
     "name": "Codewars",
     "url": "https://www.codewars.com/",
     "category": "backend",
-    "subcategory": "exercisesChallenges"
+    "subcategory": "exercisesChallenges",
+    "description": "Plataforma que ofrece desafíos de programación en forma de 'katas', para mejorar habilidades en diferentes lenguajes."
   },
   {
     "id": 27,
     "name": "Exercism",
     "url": "https://exercism.io/",
     "category": "backend",
-    "subcategory": "exercisesChallenges"
+    "subcategory": "exercisesChallenges",
+    "description": "Plataforma que ofrece ejercicios y proyectos de programación para practicar y mejorar habilidades en diferentes lenguajes."
   },
   {
     "id": 28,
     "name": "Data Structure Visualizations",
     "url": "https://www.cs.usfca.edu/~galles/visualization/Algorithms.html",
     "category": "backend",
-    "subcategory": "learningTools"
+    "subcategory": "learningTools",
+    "description": "Recursos educativos que permiten visualizar estructuras de datos y algoritmos en acción, facilitando la comprensión."
   },
   {
     "id": 29,
     "name": "OnlineGDB",
     "url": "https://www.onlinegdb.com/",
     "category": "backend",
-    "subcategory": "onlineCompilers"
+    "subcategory": "onlineCompilers",
+    "description": "Compilador en línea que admite múltiples lenguajes de programación, ideal para probar y depurar código."
   },
   {
     "id": 30,
     "name": "CodePen",
     "url": "https://codepen.io/pen/",
     "category": "frontend",
-    "subcategory": "onlineCompilers2"
+    "subcategory": "onlineCompilers2",
+    "description": "Compilador en línea que permite escribir y visualizar código en HTML, CSS y JavaScript."
   },
   {
     "id": 31,
     "name": "JSFiddle",
     "url": "https://jsfiddle.net",
     "category": "frontend",
-    "subcategory": "onlineCompilers2"
+    "subcategory": "onlineCompilers2",
+    "description": "Entorno de desarrollo en línea para probar y compartir código JavaScript, HTML y CSS."
   },
   {
     "id": 32,
     "name": "CodeSandbox",
     "url": "https://codesandbox.io",
     "category": "frontend",
-    "subcategory": "onlineCompilers2"
+    "subcategory": "onlineCompilers2",
+    "description": "Plataforma para crear, ejecutar y compartir proyectos de código en línea."
   },
   {
     "id": 33,
     "name": "CSS Battle",
     "url": "https://cssbattle.dev",
     "category": "frontend",
-    "subcategory": "CSS_Tools"
+    "subcategory": "CSS_Tools",
+    "description": "Desafío para practicar habilidades en CSS, replicando diseños con solo CSS."
   },
   {
     "id": 34,
     "name": "Flexbox Froggy",
     "url": "https://flexboxfroggy.com",
     "category": "frontend",
-    "subcategory": "CSS_Tools"
+    "subcategory": "CSS_Tools",
+    "description": "Juego interactivo para aprender y practicar Flexbox en CSS."
   },
   {
     "id": 35,
     "name": "CSS Grid Garden",
     "url": "https://cssgridgarden.com",
     "category": "frontend",
-    "subcategory": "CSS_Tools"
+    "subcategory": "CSS_Tools",
+    "description": "Juego interactivo para aprender y practicar CSS Grid."
   },
   {
     "id": 36,
     "name": "CSS Grid Generator",
     "url": "https://cssgrid-generator.netlify.app",
     "category": "frontend",
-    "subcategory": "CSS_Tools"
+    "subcategory": "CSS_Tools",
+    "description": "Herramienta para generar código CSS Grid de manera rápida y fácil."
   },
   {
     "id": 37,
     "name": "Postman",
     "url": "https://www.postman.com",
     "category": "frontend",
-    "subcategory": "apis"
+    "subcategory": "apis",
+    "description": "Plataforma para probar, documentar y compartir APIs."
   },
   {
     "id": 38,
     "name": "Hoppscotch",
     "url": "https://hoppscotch.io",
     "category": "frontend",
-    "subcategory": "apis"
+    "subcategory": "apis",
+    "description": "Herramienta para probar y depurar APIs de manera fácil y rápida."
   },
   {
     "id": 39,
     "name": "Reqbin",
     "url": "https://reqbin.com",
     "category": "frontend",
-    "subcategory": "apis"
+    "subcategory": "apis",
+    "description": "Herramienta para probar y depurar APIs, con soporte para múltiples métodos HTTP."
   },
   {
     "id": 40,
     "name": "Httpie",
     "url": "https://httpie.io",
     "category": "frontend",
-    "subcategory": "apis"
+    "subcategory": "apis",
+    "description": "Herramienta de línea de comandos para probar y depurar APIs de manera fácil."
   },
   {
     "id": 41,
     "name": "Error Lens",
     "url": "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens",
     "category": "other",
-    "subcategory": "extensions"
+    "subcategory": "extensions",
+    "description": "Extensión para Visual Studio Code que resalta errores en el código."
   },
   {
     "id": 42,
     "name": "Material Icon Theme",
     "url": "https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme",
     "category": "other",
-    "subcategory": "extensions"
+    "subcategory": "extensions",
+    "description": "Tema de iconos para Visual Studio Code con estilo Material Design."
   },
   {
     "id": 43,
     "name": "Thunder Client",
     "url": "https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client",
     "category": "other",
-    "subcategory": "extensions"
+    "subcategory": "extensions",
+    "description": "Extensión para Visual Studio Code para probar y depurar APIs."
   },
   {
     "id": 44,
     "name": "Import Cost",
     "url": "https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost",
     "category": "other",
-    "subcategory": "extensions"
+    "subcategory": "extensions",
+    "description": "Extensión para Visual Studio Code que muestra el costo de importar módulos."
   },
   {
     "id": 45,
     "name": "Cyberchef",
     "url": "https://gchq.github.io/CyberChef/",
     "category": "other",
-    "subcategory": "security"
+    "subcategory": "security",
+    "description": "Herramienta en línea para analizar y transformar datos."
   },
   {
     "id": 46,
     "name": "Codebeautifiers",
     "url": "https://www.codebeautifiers.com/",
     "category": "other",
-    "subcategory": "security"
+    "subcategory": "security",
+    "description": "Herramienta en línea para convertir codigo, encriptar datos y generar hash."
   },
   {
     "id": 47,
     "name": "VirusTotal",
     "url": "https://www.virustotal.com/gui/home/upload",
     "category": "other",
-    "subcategory": "security"
+    "subcategory": "security",
+    "description": "Plataforma para analizar archivos y URLs en busca de malware."
   },
   {
     "id": 48,
     "name": "Check SSL",
     "url": "https://www.sslshopper.com/ssl-checker.html",
     "category": "other",
-    "subcategory": "security"
+    "subcategory": "security",
+    "description": "Herramienta en línea para verificar la validez de certificados SSL."
   },
   {
     "id": 49,
     "name": "dbdiagram.io",
     "url": "https://dbdiagram.io/home",
     "category": "other",
-    "subcategory": "dba"
+    "subcategory": "dba",
+    "description": "Herramienta en línea para diseñar y visualizar bases de datos."
   },
   {
     "id": 50,
     "name": "SQLDBM",
     "url": "https://sqldbm.com/Home/",
     "category": "other",
-    "subcategory": "dba"
+    "subcategory": "dba",
+    "description": "Herramienta en línea para diseñar y modelar bases de datos."
   },
   {
     "id": 51,
     "name": "DbDesigner.net",
     "url": "https://www.dbdesigner.net/",
     "category": "other",
-    "subcategory": "dba"
+    "subcategory": "dba",
+    "description": "Herramienta en línea para diseñar y modelar bases de datos."
   },
   {
     "id": 52,
     "name": "Postgres.new",
     "url": "https://postgres.new/",
     "category": "other",
-    "subcategory": "dba"
+    "subcategory": "dba",
+    "description": "Herramienta en línea para crear y gestionar bases de datos con inteligencia artificial."
   }
 ]

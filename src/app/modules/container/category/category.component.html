@@ -78,7 +78,7 @@
           <ul class="grid grid-cols-1 gap-2 sm:grid-cols-4 md:grid-cols-4">
             @for (item of filteredData[subcategory]; track item.name) {
             <a class="group border border-slate-400 bg-slate-800 p-2.5 sm:p-3.5 block no-underline rounded-lg relative text-white font-regular text-md hover:border-slate-600 hover:text-slate-300 overflow-hidden font-bold"
-              [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)">
+              [href]="item.url" target="_blank" (contextmenu)="handleRightClick($event, item)" (touchstart)="handleTouchStart($event, item)" (touchend)="handleTouchEnd()">
               {{ item.name }}
             </a>
             }

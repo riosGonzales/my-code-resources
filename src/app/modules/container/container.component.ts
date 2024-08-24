@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router, ActivatedRoute, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { DescriptionComponent } from '~/modules/container/description/description.component';
@@ -17,7 +18,8 @@ import { Category } from '~/interfaces/category.interface';
     CommonModule,
     FormsModule,
     DescriptionComponent,
-    CategoryComponent
+    CategoryComponent,
+    RouterModule
   ],
   templateUrl: './container.component.html',
   styles: [`.mirror {transform: scaleX(-1);}`],
@@ -25,9 +27,8 @@ import { Category } from '~/interfaces/category.interface';
 
 export class ContainerComponent implements OnInit {
   //State
-  estado: number = 0;
-  estadoDescription: boolean = false;
-
+  state: number = 0;
+  isMobile: boolean = false;
   //Category
   category: Category[] = [];
   categories: { category: string, subcategories: string[] }[] = [];
@@ -40,22 +41,33 @@ export class ContainerComponent implements OnInit {
   data: Data[] = [];
   filteredData: { [subcategory: string]: Data[] } = {};
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private router: Router) { }
+  
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
 
   ngOnInit(): void {
+    this.checkScreenSize();
     this.category = this.dataService.getCategories();
     this.categories = this.dataService.getCategoriesData();
     this.buildSubcategoryNames();
   }
 
+  private checkScreenSize() {
+    this.isMobile = window.innerWidth < 768; 
+  }
+
   updateEstado(newEstado: number) {
     this.isCategorySelected = true;
-    this.estado = newEstado;
+    this.state = newEstado;
     const categoryObj = this.getCategoryByState(newEstado);
     if (categoryObj) {
       this.dataService.getJson(categoryObj.category).subscribe(data => {
         this.data = data;
         this.filteredData = this.filterDataBySubcategories(data, categoryObj.subcategories);
+        this.router.navigate([`/categoria/${categoryObj.category}`]);
       });
     }
   }

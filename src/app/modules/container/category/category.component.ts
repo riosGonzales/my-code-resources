@@ -18,11 +18,27 @@ export class CategoryComponent {
   @Input() subcategoryNames: any = {};
   @Input() estadoDescription = true;
   data: Data[] = [];
+  private touchTimer: any;
 
   constructor(private renderer: Renderer2, private dataService: DataService){}
 
-  handleRightClick(event: MouseEvent, item: Data) {
-    event.preventDefault();
+  handleRightClick(event: MouseEvent, item: Data): void {
+    event.preventDefault(); 
+    this.getDescription(item);
+  }
+
+  handleTouchStart(event: TouchEvent, item: Data): void {
+    event.preventDefault(); 
+    this.touchTimer = setTimeout(() => {
+      this.getDescription(item);
+    }, 2000); 
+  }
+
+  handleTouchEnd(): void {
+    clearTimeout(this.touchTimer);
+  }
+
+  private getDescription(item: Data): void {
     this.estadoDescription = true;
     if (this.estadoDescription) {
       this.renderer.addClass(document.body, 'overflow-hidden');
