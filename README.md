@@ -29,6 +29,9 @@ myCodeResources es una plataforma integral diseñada para reunir y organizar her
 
 ### Capturas de pantalla de la web
 
+- [Vista en teléfono](https://github.com/riosGonzales/my-code-resources/blob/main/src/assets/phone.png)
+- [Vista en escritorio](https://github.com/riosGonzales/my-code-resources/blob/main/src/assets/desktop.png)
+
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 ## Para empezar
