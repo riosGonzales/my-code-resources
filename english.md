@@ -4,11 +4,10 @@ A collection of tools and platforms to help you improve your English skills, fro
 
 ## Grammar and Vocabulary
 
-1. [Grammarly](https://www.grammarly.com)
-2. [Cambridge Dictionary](https://dictionary.cambridge.org)
-3. [Vocabulary.com](https://www.vocabulary.com)
-4. [Merriam-Webster](https://www.merriam-webster.com)
-5. [EngVid](https://www.merriam-webster.com)
+1. [Cambridge Dictionary](https://dictionary.cambridge.org)
+2. [Vocabulary.com](https://www.vocabulary.com)
+3. [Merriam-Webster](https://www.merriam-webster.com)
+4. [EngVid](https://www.engvid.com/)
 
 ## Listening and Speaking
 
