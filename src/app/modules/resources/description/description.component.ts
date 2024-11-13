@@ -1,7 +1,7 @@
 import { CommonModule, } from '@angular/common';
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Data } from '~/interfaces/data.interface';
+import { Resources } from '~/interfaces/resources.interface';
 import { DataService } from '~/services/data.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class DescriptionComponent implements OnInit {
 
   name: string | null = null;
   description: string | null = null;
-  data: Data | null = null;
+  data: Resources | null = null;
 
   pagina: string | null = null;
   categoria: string | null = null;

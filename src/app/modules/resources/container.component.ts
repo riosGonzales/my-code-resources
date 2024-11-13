@@ -1,14 +1,14 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, ActivatedRoute, RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-import { DescriptionComponent } from '~/modules/container/description/description.component';
-import { CategoryComponent } from '~/modules/container/category/category.component';
+import { DescriptionComponent } from '~/modules/resources/description/description.component';
+import { CategoryComponent } from '~/modules/resources/category/category.component';
 
 import { DataService } from '../../services/data.service';
 
-import { Data } from '../../interfaces/data.interface';
+import { Resources } from '../../interfaces/resources.interface';
 import { Category } from '~/interfaces/category.interface';
 
 @Component({
@@ -38,8 +38,8 @@ export class ContainerComponent implements OnInit {
   subcategoryNames: { [key: string]: string } = {};
 
   //Data
-  data: Data[] = [];
-  filteredData: { [subcategory: string]: Data[] } = {};
+  data: Resources[] = [];
+  filteredData: { [subcategory: string]: Resources[] } = {};
 
   constructor(private dataService: DataService, private router: Router) { }
   
@@ -88,8 +88,8 @@ export class ContainerComponent implements OnInit {
     });
   }
 
-  filterDataBySubcategories(data: Data[], subcategories: string[]): { [subcategory: string]: Data[] } {
-    const filtered: { [subcategory: string]: Data[] } = {};
+  filterDataBySubcategories(data: Resources[], subcategories: string[]): { [subcategory: string]: Resources[] } {
+    const filtered: { [subcategory: string]: Resources[] } = {};
     subcategories.forEach(subcategory => {
       filtered[subcategory] = data.filter(item => item.subcategory === subcategory);
     });

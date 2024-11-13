@@ -1,5 +1,4 @@
-export interface Data{
-    id: number;
+export interface Resources{
     name: string;
     url: string;
     category: string;

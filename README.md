@@ -1,10 +1,21 @@
 <a name="readme-top"></a>
+
 <div align="center">
 
 ## My Code Resources
 
 myCodeResources es una plataforma integral diseñada para reunir y organizar herramientas e información esenciales para ayudar a los desarrolladores a lo largo de sus proyectos.\
 [Reportar error](https://github.com/riosGonzales/my-code-resources/issues) · [Sugerir algo](https://github.com/riosGonzales/my-code-resources/issues)
+
+</div>
+
+<div align="center">
+
+### Si eres desarrollador Backend, [entra aquí](./backend.md)
+
+### Si eres desarrollador Frontend, [entra aquí](./frontend.md)
+
+### Si quieres mejorar tu Inglés, [entra aquí](./english.md)
 
 </div>
 

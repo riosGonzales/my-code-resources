@@ -1,28 +1,31 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Data } from '../interfaces/data.interface';
+import { Resources } from '../interfaces/resources.interface';
 import { map } from 'rxjs/operators';
 import { Category } from '~/interfaces/category.interface';
+import { db } from '~/firebase.config';
+import { collection, addDoc, getDocs, doc, updateDoc, deleteDoc, DocumentReference, CollectionReference, Firestore } from 'firebase/firestore';
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class DataService {
 
   private jsonUrl = 'assets/data.json';
-  private dataSubject = new BehaviorSubject<Data | null>(null);
+  private dataSubject = new BehaviorSubject<Resources | null>(null);
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private firestore: Firestore) { }
 
   //Category
   private categoryMap: { [key: string]: string } = {
     'design': 'Diseño UX/UI',
     'frontend': 'Frontend',
-    'backend' : 'Backend',
-    'other' : 'Otros'
+    'backend': 'Backend',
+    'other': 'Otros'
   };
-  
+
   getCategories(): Category[] {
     return [
       { id: 1, name: 'Diseño UX/UI' },
@@ -43,7 +46,7 @@ export class DataService {
     { category: 'other', subcategories: ['extensions', 'security', 'dba'] }
   ];
 
-  getCategoriesData(){
+  getCategoriesData() {
     return this.categoriesData;
   }
 
@@ -66,18 +69,18 @@ export class DataService {
   };
 
 
-  getJson(category: string): Observable<Data[]> {
+  getJson(category: string): Observable<Resources[]> {
     const params = new HttpParams().set('category', category);
-    return this.http.get<Data[]>(this.jsonUrl, { params })
+    return this.http.get<Resources[]>(this.jsonUrl, { params })
   }
 
-  getByName(name: string): Observable<Data[]> {
-    return this.http.get<Data[]>(this.jsonUrl).pipe(
+  getByName(name: string): Observable<Resources[]> {
+    return this.http.get<Resources[]>(this.jsonUrl).pipe(
       map(data => this.filterByName(data, name))
     );
   }
 
-  private filterByName(data: Data[], name: string): Data[] {
+  private filterByName(data: Resources[], name: string): Resources[] {
     return data.filter(item => item.name === name);
   }
 
@@ -89,33 +92,23 @@ export class DataService {
 
 
   //Enviar datos
-  setData(data: Data): void {
+  setData(data: Resources): void {
     this.dataSubject.next(data);
   }
-  getData(): Observable<Data | null> {
+  getData(): Observable<Resources | null> {
     return this.dataSubject.asObservable();
   }
 
-  //Alert
-  private alertSubject: BehaviorSubject<[string, string] | null> =
-    new BehaviorSubject<[string, string] | null>(null);
 
-  private confirmSubject: BehaviorSubject<boolean> =
-    new BehaviorSubject<boolean>(false);
-
-  getAlert(): Observable<[string, string] | null> {
-    return this.alertSubject.asObservable();
+  addResource(resource: Resources): Promise<void> {
+    const resourceRef = collection(this.firestore, 'resources');
+    return addDoc(resourceRef, resource)
+      .then(() => {
+        console.log('Recurso agregado correctamente');
+      })
+      .catch((error) => {
+        console.error('Error al agregar el recurso:', error);
+      });
   }
-
-  showAlert(message: string, titulo: string): void {
-    this.alertSubject.next([message, titulo]);
-  }
-
-  getConfirmation(): Observable<boolean> {
-    return this.confirmSubject.asObservable();
-  }
-
-  confirmAction(confirmed: boolean): void {
-    this.confirmSubject.next(confirmed);
-  }
+  
 }

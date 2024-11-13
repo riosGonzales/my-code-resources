@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Renderer2, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Data } from '~/interfaces/data.interface';
+import { Resources } from '~/interfaces/resources.interface';
 import { DataService } from '~/services/data.service';
 
 @Component({
@@ -17,28 +17,28 @@ export class CategoryComponent {
   @Input() estado: number = 0;
   @Input() subcategoryNames: any = {};
   @Input() estadoDescription = true;
-  data: Data[] = [];
+  data: Resources[] = [];
   private touchTimer: any;
 
-  constructor(private renderer: Renderer2, private dataService: DataService){}
+  constructor(private renderer: Renderer2, private dataService: DataService) { }
 
-  handleRightClick(event: MouseEvent, item: Data): void {
-    event.preventDefault(); 
+  handleRightClick(event: MouseEvent, item: Resources): void {
+    event.preventDefault();
     this.getDescription(item);
   }
 
-  handleTouchStart(event: TouchEvent, item: Data): void {
-    event.preventDefault(); 
+  handleTouchStart(event: TouchEvent, item: Resources): void {
+    event.preventDefault();
     this.touchTimer = setTimeout(() => {
       this.getDescription(item);
-    }, 2000); 
+    }, 2000);
   }
 
   handleTouchEnd(): void {
     clearTimeout(this.touchTimer);
   }
 
-  private getDescription(item: Data): void {
+  private getDescription(item: Resources): void {
     this.estadoDescription = true;
     if (this.estadoDescription) {
       this.renderer.addClass(document.body, 'overflow-hidden');
